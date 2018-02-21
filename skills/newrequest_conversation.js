@@ -22,8 +22,8 @@ module.exports = function(controller) {
                   { json: { question: response.text } },
                   function (error, response, body) {
                     if (!error && response.statusCode == 200) {
-                      convo.say("Bazinga, we did it");
-                      var response = JSON.stringify(body);
+                      var dummyRequest = body.good_match[0].reference;
+                      convo.say('You are in luck, we found a match with your request. The reference number is' + dummyRequest);
                     } else {
                       convo.say("Ahh, you got bamboozled again. Couldn't process your request");
                     }
