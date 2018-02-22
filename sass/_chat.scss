@@ -1,5 +1,5 @@
 $action_color: orange;
-$background: #FFFFFF;
+$background: #FF5733;
 $bot_message_background: #F0F0F0;
 $bot_message_text: #333;
 $human_message_background: $botkit_purple;
@@ -10,6 +10,8 @@ $human_message_text: white;
     border-left: 1px solid #CCC;
     border-right: 1px solid #CCC;
 
+    position: fixed;
+    right: 800px;
     /*height: 500px;
     width: 320px;*/
     height: 100%;

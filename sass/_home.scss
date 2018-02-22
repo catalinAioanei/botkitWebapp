@@ -6,9 +6,11 @@
 }
 
 #homepage_bot {
-    width: 400px;
-    height: 450px;
     float: left;
+    position: relative;
+    left: 20%;
+    width: 500px;
+    height: 450px;
     border: 5px solid #333;
 
     iframe {
