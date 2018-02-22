@@ -1,6 +1,6 @@
 module.exports = function(controller) {
 
-  controller.hears('abc', 'message_received', function(bot, message) {
+  controller.hears('help', 'message_received', function(bot, message) {
 
     bot.reply(message, {
         text: 'Here is what I can do!',

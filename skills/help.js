@@ -1,6 +1,6 @@
 module.exports = function(controller) {
 
-  controller.hears('help', 'message_received', function(bot, message) {
+  controller.hears('abc', 'message_received', function(bot, message) {
 
       bot.startConversation(message, function(err, convo) {
           convo.say('Here is a list of commands I can do:');

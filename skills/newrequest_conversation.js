@@ -22,8 +22,11 @@ module.exports = function(controller) {
                   { json: { question: response.text } },
                   function (error, response, body) {
                     if (!error && response.statusCode == 200) {
-                      var dummyRequest = body.label;
-                      convo.say('You are in luck, we found a match with your request. The reference number is' + dummyRequest);
+                      if(body.good_match.length == 0){
+                        convo.say('We processed your request but could not find any matches');
+                      }else{
+                        convo.say('Good news. We found a match. The reference number is : ' + body.good_match[0].reference);
+                      }
                     } else {
                       convo.say("Ahh, you got bamboozled again. Couldn't process your request");
                     }
