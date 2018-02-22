@@ -271,6 +271,8 @@ a.button {
   width: 400px;
   height: 450px;
   float: left;
+  position: relative;
+    left: 20%;
   border: 5px solid #333;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); }
   #homepage_bot iframe {
