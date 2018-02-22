@@ -18,12 +18,12 @@ module.exports = function(controller) {
                 convo.say('Please wait while we try to find any matches...');
 
                 request.post(
-                  'https://eb704eb5-74f2-4c00-81ba-58838f2aad77.mock.pstmn.io',
+                  'http://localhost:5000/predict',
                   { json: { question: response.text } },
                   function (error, response, body) {
                     if (!error && response.statusCode == 200) {
-                      convo.say("Bazinga, we did it");
-                      var response = JSON.stringify(body);
+                      var dummyRequest = body.label;
+                      convo.say('You are in luck, we found a match with your request. The reference number is' + dummyRequest);
                     } else {
                       convo.say("Ahh, you got bamboozled again. Couldn't process your request");
                     }
